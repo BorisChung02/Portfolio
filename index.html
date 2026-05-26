@@ -9,7 +9,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
     
-    * { 
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -495,16 +495,8 @@
         return;
       }
 
-      const cleanUrl = url.trim();
-      let finalUrl = cleanUrl;
-      if (cleanUrl.includes('imgur.com') && !cleanUrl.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
-        finalUrl = cleanUrl + '.jpeg';
-      }
-      
-      imgEl.src = '';
-      setTimeout(() => {
-        imgEl.src = finalUrl + (finalUrl.includes('?') ? '&' : '?') + 't=' + Date.now();
-      }, 10);
+      let finalUrl = url.trim();
+      imgEl.src = finalUrl;
       imgEl.alt = 'Project image';
       imgEl.style.display = 'block';
     }
@@ -1039,8 +1031,8 @@
       about_text: "Mechanical Engineering (Honours) graduate from The University of Queensland with hands-on experience in mechatronic systems, embedded controls, and hardware integration. I enjoy turning ideas into working prototypes from industrial antenna systems and competition robots to autonomous platforms.",
       project_1_title: "Motorised Antenna Orientation Control",
       project_1_description: "This was my final year team project with THIESS Mining. We developed a motorised system to automatically align LTE antennas on 8-metre masts, replacing the old manual hand-cranking method.",
-      project_1_image: "https://imgur.com/ssHlIbO",
-      project_1_photos: "https://imgur.com/A067uPc, https://imgur.com/ywKqeaJ, https://imgur.com/ssHlIbO, https://imgur.com/MaDfdNR, https://imgur.com/nJ4rpCm, https://imgur.com/YJ8fzkR, https://imgur.com/cJpdLFF, https://imgur.com/Dor70TU, https://imgur.com/LqtpOTG, https://imgur.com/MENcCQX, https://imgur.com/4X3ftaq",
+      project_1_image: "Portfolio_photo/Cover/Cover_MAOC.jpg",
+      project_1_photos: "Portfolio_photo/MAOC/MAOC_1.jpg, Portfolio_photo/MAOC/MAOC_2.jpeg, https://imgur.com/ssHlIbO, https://imgur.com/MaDfdNR, https://imgur.com/nJ4rpCm, https://imgur.com/YJ8fzkR, https://imgur.com/cJpdLFF, https://imgur.com/Dor70TU, https://imgur.com/LqtpOTG, https://imgur.com/MENcCQX, https://imgur.com/4X3ftaq",
       // project_1_impact: "",
       project_1_challenge: "Previously, technicians had to manually crank the antennas up, check the signal strength by eye, then crank them back down for adjustments. The process took 10 to 15 minutes per antenna, was physically demanding, and often gave inconsistent results.",
       project_1_solution: "As a team, we designed and built a dual-axis motorised positioning system using stepper motors controlled by a Raspberry Pi. The system provided real-time signal strength feedback so technicians could accurately align the antenna from the ground.<br><br>We selected a store-bought IP67-rated industrial enclosure to confidently meet the harsh environmental requirements. Within the tight size constraints of this enclosure, we optimised our mechanical design to reduce weight while still providing sufficient structural strength for real mining site conditions.",
@@ -1049,7 +1041,7 @@
       project_1_outcome: "Reduced antenna alignment time from 10–15 minutes to under 5 minutes.<br><br>Achieved ±0.1° positioning accuracy, significantly better than the required ±1°.<br><br>Exceeded the required movement range with ±17° in both azimuth and elevation.<br><br>Delivered industrial-grade hardware (IP67 weatherproof and AS3000 compliant) that was validated as a working prototype ready for site deployment.",
       project_2_title: "Remote-Controlled Tractor Pull System",
       project_2_description: "This was a competitive mechanical design course project where we were challenged to build a remote-controlled tractor capable of pulling a 60kg sled. The goal was to maximise pulling force while keeping the tractor lightweight and structurally strong under dynamic loads.",
-      project_2_image: "https://i.imgur.com/TDQUE3v",
+      project_2_image: "",
       project_2_photos: "https://imgur.com/gwpvBGL, https://imgur.com/bC1FG2w, https://imgur.com/2bfgPe9, https://imgur.com/EYpJJcT, https://imgur.com/8POisRh, https://imgur.com/2B0SO9Z, https://imgur.com/nf0O8sn, https://imgur.com/x5EhGmc",
       // project_2_impact: "",
       project_2_challenge: "The main challenge was to design a high-performance tractor that could generate strong pulling force while remaining lightweight and durable under dynamic loads. All subsequent design decisions and calculations were heavily dependent on carefully selecting the right motor ratings, motor drivers, and battery systems that could deliver sufficient power without exceeding our tight budget.",
