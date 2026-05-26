@@ -496,17 +496,6 @@
       }
 
       let finalUrl = url.trim();
-      
-      // Convert relative paths to full GitHub Pages URLs
-      if (!finalUrl.startsWith('http://') && !finalUrl.startsWith('https://')) {
-        // Remove leading ./ if present
-        if (finalUrl.startsWith('./')) {
-          finalUrl = finalUrl.substring(2);
-        }
-        // Build full GitHub Pages URL
-        finalUrl = 'https://borischung02.github.io/Portfolio/' + finalUrl;
-      }
-      
       imgEl.src = finalUrl;
       imgEl.alt = 'Project image';
       imgEl.style.display = 'block';
